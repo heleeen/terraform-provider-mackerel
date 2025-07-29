@@ -705,6 +705,7 @@ func Test_Monitor_toMackerelMonitor(t *testing.T) {
 				Legend:   "nginx cpu utilization on {{k8s.node.name}}",
 				Operator: ">",
 				Warning:  toPtr(0.7),
+				EvaluateBackwardMinutes: toPtr(uint64(0)),
 			},
 		},
 		"query/full": {
@@ -736,6 +737,7 @@ func Test_Monitor_toMackerelMonitor(t *testing.T) {
 				Operator: ">",
 				Warning:  toPtr(0.7),
 				Critical: toPtr(0.9),
+				EvaluateBackwardMinutes: toPtr(uint64(0)),
 			},
 		},
 		"connectivity/basic": {

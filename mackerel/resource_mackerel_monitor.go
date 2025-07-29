@@ -305,6 +305,7 @@ func resourceMackerelMonitor() *schema.Resource {
 							Type:         schema.TypeInt,
 							Optional:     true,
 							ValidateFunc: validation.IntBetween(2, 10),
+							Default:  2,
 						},
 					},
 				},
